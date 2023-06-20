@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://wallpapercave.com/wp/wp11258908.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+@font-face {
+    font-family: pixie;
+    src: url(../fonts/pixie.ttf)
+}
+
+.glitch {
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: .5em;
+    font-family: pixie;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.contentbox {
+    position: relative;
+    color: white;
+    width: 90%;
+    height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
+    margin-top: 80px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 50px 20px 50px;
+}
+
+.contentbox h1 {
+    font-family: pixie;
+    margin-bottom: 10px;
+    letter-spacing: .2em;
+}
+
+.contentbox p {
+    justify-content: left;
+    font-size: 18px;
+}
+
+.underscore {
+    visibility: hidden;
+    font-size: 21px;
+}
